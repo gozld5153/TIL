@@ -22,5 +22,5 @@
    + **401 - UNATHORIZED**
    + **403 - FORBIDDEN**
    + **404 - NOT FOUND** 
-      * 400번대는 모두 클라이언트의 잘못이다.   
+      * `400번대는 모두 클라이언트의 잘못이다.`   
    + **500 - INTERNAL SERVER ERROR** `서버의 문제`
