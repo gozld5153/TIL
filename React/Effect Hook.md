@@ -2,7 +2,7 @@
 > ### Effect Hook ?
 함수 컴포넌트 내에서 `side effects`를 수행할 수 있게 해주는 react Hook의 내장함수.
  *  `side effects`란 함수내부의 작동이 함수외부에 영향을 미치는 것을 말한다.  
-
+***
 > ### useEffect
 화면이 랜더링 될 때마다 effect라는 함수를 실행시킨다. 
 ```js
