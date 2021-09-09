@@ -1,6 +1,6 @@
 # Express
 > ### express.json
-* express version 4.6 이상부터 json()기능 내장 
+* express version 4.6 이상부터 `body-parser`기능 내장 
 ```js
 const express = require('express')
 const app = express()
