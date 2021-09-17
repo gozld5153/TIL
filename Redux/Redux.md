@@ -56,7 +56,7 @@ function reducer(state, action){
 ```js
 import { createStore } from 'redux';
 ```
-`creatStore`함수는 `reducer`라는 필수 인자를 사용한다.
+`creatStore`함수는 `reducer`함수를 필수 인자로 사용한다.
 ```js
 const store = createStore(reducer);
 ```
