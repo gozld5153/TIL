@@ -71,6 +71,58 @@ stroe.dispatch({
    todo: {id: '0', name: 'learn redux', completed: false},
 })
 
-//store에서 글로벌 staate를 가져오는 방법
+//store에서 글로벌 state를 가져오는 방법
 store.getState()
+```
+***
+> ### 예시코드
+``` js
+const { createStore } = require('redux');
+const CHANGE_NAME = 'CHANGE_NAME';
+const ADD_POST = 'ADD_POST';
+//state
+const initState = {
+  name: '백지욱',
+  posts: [],
+};
+//action
+const changeName = (data) => {
+  return {
+    //action 객체
+    type: CHANGE_NAME,
+    payload: data,
+  };
+};
+const addPost = (post) => {
+  return {
+    type: ADD_POST,
+    payload: post,
+  };
+};
+//reducer
+const reducer = (prevState, action) => {
+  switch (action.type) {
+    case CHANGE_NAME:
+      return {
+        ...prevState,
+        name: action.payload,
+      };
+    case ADD_POST:
+      return {
+        ...prevState,
+        posts: [...prevState.posts, action.payload],
+      };
+    default:
+      return prevState;
+  }
+};
+//store
+const store = createStore(reducer, initState);
+
+console.log(store.getState());
+store.dispatch(changeName('이창우'));
+console.log(store.getState());
+store.dispatch(addPost('2'));
+store.dispatch(addPost('2'));
+console.log(store.getState());
 ```
