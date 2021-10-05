@@ -1,5 +1,5 @@
 # CSS in JS
-> ### Styled Component
+> ## Styled Component
 * **Automatic critical CSS**    
 Styled Component는 화면에 어떤 컴포넌틑가 렌더링 되었는지 추적해서 해당하는 컴포넌트에 대한 스타일을 자동으로 삽입합니다. 따라서 코드를 적절히 분배해 놓으면 사용자가 어플리케이션을 사용할 때 최소한의 코드만으로 화면이 띄워지도록 할 수 있습니다.
 

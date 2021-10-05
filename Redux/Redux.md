@@ -1,12 +1,12 @@
 # Redux
-> ### Redux?
+> ## Redux?
 `Redux`는 `state`관리를 도와주는 라이브러리이다.    
 ```
 View -> Action -> Reducer(s) -> Stroe -> View
 ```
 `View`는 `state`의 관리 컨테이너이다. 이곳에서 event 호출이 발생하면 `Dispatch` 메소드에 `Action` 객체를 인자로 받아서 `Reducer`를 호출하게 된다. `Reducer`에 의해 새로운 `state`가 생성되고 이 값이 `Store`에 저장된다.
 ***
-> ### Action
+> ## Action
 `action`은 `type`과 `payload`를 가지고 있는 자바스크립트 객체이다. `type`은 **action type**이라고 부르기도 한다. `type`은 문자열이고, `payload`는 어떤 타입이든지 올 수 있다. 
 ```js
 {
@@ -51,7 +51,7 @@ function reducer(state, action){
 }
 ```
 ***
-> ### Store
+> ## Store
 `store`는 단 하나만의 글로벌 객체를 지닌다. `import`를 통해 사용할 수 있다. 
 ```js
 import { createStore } from 'redux';
