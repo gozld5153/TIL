@@ -42,7 +42,7 @@ useEffect(()=>{
   
   const countDown = setInterval(()=> setSecond(second - 1), 1000)
 
-  return clearInterval(countDown)
+  return () => clearInterval(countDown)
 
 }, [second])
 ```
