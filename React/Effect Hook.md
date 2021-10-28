@@ -32,3 +32,17 @@ useEffect(() => {
 }, [])
 //두번째 인자에 빈배열을 넣을 경우 처음 랜더링이 될 때 한번만 실행된다.
 ```
+> ## Clean up 함수
+`useEffect` 사용시 호출되는 함수를 정리하고 싶을 때 사용한다. `useEffect` 함수 안에서 `return`을 사용하여 함수를 실행시키면 `componentWillUnmount`에서 정리한다.
+
+``` js
+const [second, setSecond] = useState(10)
+
+useEffect(()=>{
+  
+  const countDown = setInterval(()=> setSecond(second - 1), 1000)
+
+  return clearInterval(countDown)
+
+}, [second])
+```
