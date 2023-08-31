@@ -17,7 +17,7 @@
 5. 알맞은 상태코드를 사용한다.
    + **200 - OK**
    + **201 - CREATED**
-   + **204 - NO CONTENT** `성공적으로 지웠다.`
+   + **204 - NO CONTENT** 
    + **304 - NOT MODIFIED** `데이터가 바뀌지 않았다. 중복요청`
    + **400 - BAD REQUEST**
    + **401 - UNATHORIZED**
@@ -25,3 +25,13 @@
    + **404 - NOT FOUND** 
       * `400번대는 모두 클라이언트의 잘못이다.`   
    + **500 - INTERNAL SERVER ERROR** `서버의 문제`
+
+
+### 204 - NO CONTENT
+   클라이언트의 요청은 정상적으로 반영되었지만, 페이지 이동이 필요 없을 때 보내는 상태코드    
+
+   `GITHUB REST API`를 통해서 branch merge를 실행할 때
+   base branch와 head branch 간에 변동사항이 없는 경우 204 StatusCode를 반환한다.
+
+   NO CONTENT이기 때문에 body에 어떤 값도 들어가 있지 않다.
+    
